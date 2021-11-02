@@ -2,6 +2,7 @@ var displaySeries = document.querySelector("#output-series");
 var getButton = document.querySelector("#btn-series");
 var inputSeriesNumber = document.querySelectorAll(".input-series");
 var SubmitButton = document.querySelector("#submit-button");
+var displayResult = document.querySelector("#display");
 
 var answerOne;
 var answerTwo;
@@ -66,22 +67,24 @@ function getSeriesHandler(){
  
  
     switch(randomNumber) {
-        case 1 : showSeries(2,4,6,8);
+        case 1 : showSeries(6,12,18,24);
                  seriesOneLogic();
                  break;
-        case 2 : showSeries(45,32,54,67);
+        case 2 : showSeries(6,9,14,19);
                  seriesTwoLogic();
                  break;
-        case 3 : showSeries(23,54,67,89);
+        case 3 : showSeries(8,65,514,4099);
                  seriesThreeLogic();
                  break;
-        case 4 : showSeries(1,2,3,4);
+        case 4 : showSeries(5,8,11,14);
                  seriesFourLogic();
                  break; 
-        case 5 : showSeries(4,5,6,7);
+        case 5 : showSeries(3,75,157,219);
                  seriesFiveLogic();
                  break;                                   
     }
+
+  
 }
 
 function getRandomFromOneTo100 (){
@@ -111,7 +114,7 @@ function submitHandler(){
    score = 0;
   
     checkAllAnswer(inputSeriesNumber[1],inputSeriesNumber[2],inputSeriesNumber[3]);
-    alert("score is " + score);
+    displayResult.innerHTML = " Your score is " + score;
 }
 
 getButton.addEventListener("click", getSeriesHandler);
