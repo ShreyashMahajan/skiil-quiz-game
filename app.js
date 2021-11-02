@@ -56,7 +56,9 @@ function reset(){
     score = 0;
     for( var i = 1 ; i < 4 ; i++){
           inputSeriesNumber[i].style.backgroundColor = "white";
+          inputSeriesNumber[i].value = null;
     }
+
 }
 
 function getSeriesHandler(){
