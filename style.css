@@ -1,7 +1,85 @@
+:root {
+    --primary-color : blue;
+    --secondary-color : white;
+}
+
 #heading {
     font-weight: bold;
 }
 
 #hero {
     text-align: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 0.5rem 0rem ;
 }
+
+body {
+    margin: 0 0;
+}
+#main {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.main-content {
+    margin: 2rem 0rem;
+}
+
+#output-series {
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+    padding: 0.5rem 0rem;
+}
+
+.btn-element {
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    background-color: white;
+    margin: 1rem 0.5rem;
+} 
+
+.input-series {
+  width: 3rem;
+  height: 2rem;
+  margin: 1rem 1rem;
+}
+
+#display {
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 1rem 1rem;
+    border-radius: 00.5rem;
+    color: var(--primary-color);
+    
+}
+
+.notes-info {
+    
+    margin: auto;
+   border: 1px solid black;
+    width: 50%;
+}
+.info-list {
+    list-style-type: none;
+    font-size: larger;
+    padding: 0.5rem 0.5rem;
+
+}
+
+.info-container {
+    padding: 2rem 0rem;
+}
+
+#info-heading {
+    font-size: x-large;
+    padding: 0.5rem 0.5rem;
+    color: var(--primary-color);
+}
+

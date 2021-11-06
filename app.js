@@ -18,7 +18,7 @@ function getRandomNumber(){
 }
 
 function showSeries(numberOne, numberTwo , numberThree , numberFour){
-    displaySeries.innerHTML = `${numberOne}  ${numberTwo}  ${numberThree}  ${numberFour} `
+    displaySeries.innerHTML = `${numberOne} , ${numberTwo} , ${numberThree} , ${numberFour} `
 }
 // ----- logic of series ------------------
 function seriesOneLogic(){
@@ -55,11 +55,14 @@ function seriesFiveLogic(){
 function reset(){
     score = 0;
     for( var i = 1 ; i < 4 ; i++){
-          inputSeriesNumber[i].style.backgroundColor = "white";
+          inputSeriesNumber[i].style.color = "black";
           inputSeriesNumber[i].value = null;
     }
 
 }
+
+
+
 
 function getSeriesHandler(){
  reset();
@@ -96,9 +99,12 @@ function getRandomFromOneTo100 (){
 function checkOneAnswer( inputOne , inputTwo ){
       if(Number(inputOne.value) === inputTwo){
         score = score + 50;
-        inputOne.style.backgroundColor = "green";
+        inputOne.style.color = "green";
+       
+
       }else {
-        inputOne.style.backgroundColor = "red";
+        inputOne.style.color = "red";
+       
     }
 }
 
@@ -114,7 +120,7 @@ function checkAllAnswer(inputOne, inputTwo, inputThree){
 function submitHandler(){
      
    score = 0;
-  
+   
     checkAllAnswer(inputSeriesNumber[1],inputSeriesNumber[2],inputSeriesNumber[3]);
     displayResult.innerHTML = " Your score is " + score;
 }
